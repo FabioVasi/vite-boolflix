@@ -6,10 +6,10 @@ export const state = reactive({
     movies: null,
     searchText: '',
 
-    fetchMovies() {
+    fetchMovies(url) {
         console.log(this, this.base_url);
         axios
-        .get(this.base_url)
+        .get(url)
         .then(response => {
             console.log(response.data.results);
             this.movies = response.data.results;
