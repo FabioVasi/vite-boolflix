@@ -3,7 +3,9 @@ import { reactive } from "vue";
 
 export const state = reactive({
     base_url: 'https://api.themoviedb.org/3/search/movie?api_key=daba673b73b762af2494496b68204faf',
+    tvSeries_url: 'https://api.themoviedb.org/3/search/tv?api_key=daba673b73b762af2494496b68204faf',
     movies: null,
+    seriesTv: null,
     searchText: '',
     flags_url: 'https://flagsapi.com/',
 

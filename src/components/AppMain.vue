@@ -9,7 +9,7 @@ export default {
         }
     },
     methods: {
-        flagsCreator(url, foo){
+        flagsCreator(url, foo) {
             return url + foo + '/flat/32.png'
         }
     },
@@ -31,6 +31,7 @@ export default {
         </div>
 
         <div class="row row-cols-1 row-cols-md-5 g-3">
+
             <div class="col" v-for="movie in state.movies">
                 <div class="card h-100">
                     <h2>Titolo: {{movie.title}}</h2>
@@ -42,6 +43,19 @@ export default {
                     <span>Voto: {{movie.vote_average}}</span>
                 </div>
             </div>
+
+            <div class="col" v-for="movie in state.movies">
+                <div class="card h-100">
+                    <h2>Titolo: {{movie.title}}</h2>
+                    <h3>Titolo Originale: {{movie.original_title}}</h3>
+                    <p>
+                        Lingua: {{movie.original_language}}
+                        <img :src="flagsCreator(state.flags_url, movie.original_language.toUpperCase())" alt="">
+                    </p>
+                    <span>Voto: {{movie.vote_average}}</span>
+                </div>
+            </div>
+            
         </div>
     </div>
 
