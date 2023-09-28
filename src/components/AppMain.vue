@@ -8,14 +8,9 @@ export default {
             state
         }
     },
-    methods: {
-        searchMovie() {
-            console.log(this.searchText);
-            const url = this.state.base_url + `&query=${this.state.searchText}`;
-            console.log(url);
-            this.state.fetchMovies(url)
-        }
-    },
+    /*methods: {
+        
+    },*/
     created() {
         state.fetchMovies(state.base_url);
     }
@@ -26,7 +21,7 @@ export default {
 
     <div class="container">
         <div>
-            <form action="" class="searchbox d-flex mb-5" @submit.prevent="state.searchMovie">
+            <form action="" class="searchbox d-flex mb-5" @submit.prevent="state.fetchMovies">
                 <input class="" type="search" v-model="state.searchText" placeholder="Search a movie">
                 <button type="submit" class="border-0 bg-primary text-white">Search</button>
             </form>    
