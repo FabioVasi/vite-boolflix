@@ -30,7 +30,7 @@ export default {
             </form>    
         </div>
 
-        <div class="row row-cols-1 row-cols-md-5 g-3">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
 
             <div class="col" v-for="movie in state.movies">
                 <div class="card h-100">
