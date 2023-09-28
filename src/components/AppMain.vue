@@ -18,7 +18,7 @@ export default {
         }
     },
     created() {
-        state.fetchMovies(state.base_url);
+        state.fetchMovies(state.base_url);  
     }
 }
 </script>
@@ -26,9 +26,11 @@ export default {
 <template>
 
     <div class="container">
-        <div class="searchbox d-flex mb-5">
-            <input class="form-control" type="search" v-model="state.searchText" placeholder="Search a movie">
-            <button class="border-0 bg-primary text-white" @click="$emit('performSearch')">Search</button>
+        <div>
+            <form action="" class="searchbox d-flex mb-5" @submit.prevent="state.fetchMovies">
+                <input class="form-control" type="search" v-model="state.searchText" placeholder="Search a movie">
+                <button type="submit" class="border-0 bg-primary text-white" @click="$emit('performSearch')">Search</button>
+            </form>    
         </div>
 
         <div class="row row-cols-1 row-cols-md-5 g-3">
