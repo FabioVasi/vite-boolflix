@@ -3,7 +3,6 @@ import {state} from '../state.js';
 
 export default {
     name: 'AppMain',
-    emits: ['performSearch'],
     data() {
         return {
             state
@@ -11,7 +10,7 @@ export default {
     },
     methods: {
         searchMovie() {
-            console.log(this.state.searchText);
+            console.log(this.searchText);
             const url = this.state.base_url + `&query=${this.state.searchText}`;
             console.log(url);
             this.state.fetchMovies(url)
@@ -29,7 +28,7 @@ export default {
         <div>
             <form action="" class="searchbox d-flex mb-5" @submit.prevent="state.fetchMovies">
                 <input class="" type="search" v-model="state.searchText" placeholder="Search a movie">
-                <button type="submit" class="border-0 bg-primary text-white" @click="$emit('performSearch')">Search</button>
+                <button type="submit" class="border-0 bg-primary text-white">Search</button>
             </form>    
         </div>
 
