@@ -34,7 +34,7 @@ export default {
 
             <div class="col" v-for="movie in state.movies">
                 <div class="card h-100">
-                    <h3>FILM CHE HAI CERCATO</h3>
+                    <img :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt="">
                     <h2>Titolo: {{movie.title}}</h2>
                     <h4>Titolo Originale: {{movie.original_title}}</h4>
                     <p>
@@ -47,7 +47,7 @@ export default {
 
             <div class="col" v-for="series in state.seriesTv">
                 <div class="card h-100">
-                    <h3>SERIE TV CHE HAI CERCATO</h3>
+                    <img :src="'https://image.tmdb.org/t/p/w300/' + series.poster_path" alt="">
                     <h2>Nome: {{series.name}}</h2>
                     <h4>Nome Originale: {{series.original_name}}</h4>
                     <p>
