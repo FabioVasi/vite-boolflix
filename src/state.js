@@ -10,12 +10,22 @@ export const state = reactive({
     flags_url: 'https://flagsapi.com/',
 
     fetchMovies() {
-        console.log(this, this.base_url);
+        console.log(this, this.base_url, this.tvSeries_url);
         axios
         .get(this.base_url + `&query=${this.searchText}`)
         .then(response => {
             this.movies = response.data.results;
             console.log(this.movies);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+
+        axios
+        .get(this.tvSeries_url + `&query=${this.searchText}`)
+        .then(response => {
+            this.seriesTv = response.data.results;
+            console.log(this.seriesTv);
         })
         .catch(error => {
             console.error(error);

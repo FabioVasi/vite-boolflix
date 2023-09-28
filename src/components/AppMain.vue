@@ -44,18 +44,18 @@ export default {
                 </div>
             </div>
 
-            <div class="col" v-for="movie in state.movies">
+            <div class="col" v-for="series in state.seriesTv">
                 <div class="card h-100">
-                    <h2>Titolo: {{movie.title}}</h2>
-                    <h3>Titolo Originale: {{movie.original_title}}</h3>
+                    <h2>Titolo: {{series.title}}</h2>
+                    <h3>Titolo Originale: {{series.original_title}}</h3>
                     <p>
-                        Lingua: {{movie.original_language}}
-                        <img :src="flagsCreator(state.flags_url, movie.original_language.toUpperCase())" alt="">
+                        Lingua: {{series.original_language}}
+                        <img :src="flagsCreator(state.flags_url, series.original_language.toUpperCase())" alt="">
                     </p>
-                    <span>Voto: {{movie.vote_average}}</span>
+                    <span>Voto: {{series.vote_average}}</span>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
