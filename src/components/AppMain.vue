@@ -7,6 +7,12 @@ export default {
         return {
             state
         }
+    },
+    methods: {
+
+    },
+    created() {
+        state.fetchMovies(state.base_url);
     }
 }
 </script>
