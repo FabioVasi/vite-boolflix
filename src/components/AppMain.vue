@@ -48,8 +48,8 @@ export default {
             <div class="col" v-for="series in state.seriesTv">
                 <div class="card h-100">
                     <h3>SERIE TV CHE HAI CERCATO</h3>
-                    <h2>Titolo: {{series.name}}</h2>
-                    <h3>Titolo Originale: {{series.original_name}}</h3>
+                    <h2>Nome: {{series.name}}</h2>
+                    <h3>Nome Originale: {{series.original_name}}</h3>
                     <p>
                         Lingua: {{series.original_language}}
                         <img :src="flagsCreator(state.flags_url, series.original_language.toUpperCase())" alt="">
