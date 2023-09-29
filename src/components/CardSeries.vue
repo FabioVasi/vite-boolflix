@@ -46,4 +46,8 @@ export default {
 
 <style lang="scss">
     @use '../assets/scss/partials/variables.scss' as *;
+
+    .icon{
+        fill: gold;
+    }
 </style>
