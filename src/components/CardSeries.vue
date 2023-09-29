@@ -55,8 +55,12 @@ export default {
     @use '../assets/scss/partials/variables.scss' as *;
 
     .card{
-        height: 500px;
+        height: 480px;
         width: 342px;
+    }
+    img{
+        aspect-ratio: 1 / 1.5;
+        object-fit: cover;
     }
     img:hover .overlay{
         display: block;
