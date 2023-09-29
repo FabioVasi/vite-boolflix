@@ -21,20 +21,7 @@ export default {
 
 <template>
 
-    <header id="header_app">
-
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="mb-0 ms-3">Boolflix</h1>
-
-            <div class="searchbox m-3">
-                <form class="d-flex justify-content-between align-items-center" @submit.prevent="state.fetchMovies">
-                    <input class="form-control me-2 rounded-3" type="search" v-model="state.searchText" placeholder="Search a movie">
-                    <button type="submit" class="border-0 text-white ms-2 rounded-3 fs-3 fw-bold">Search</button>
-                </form>    
-            </div>
-        </div>
-
-    </header>
+    
 
     <main id="main_app" class="mt-4">
 
@@ -92,22 +79,7 @@ export default {
 <style lang="scss">
     @use '../assets/scss/partials/variables.scss' as *;
 
-    #header_app{
-        background-color: black;
-    }
-    h1{
-        color: red;
-        font-style: normal;
-        font-size: 4rem;
-    }
-    input{
-        height: 50px;
-    }
-    button{
-        height: 50px;
-        width: 150px;
-        background-color: red;
-    }
+    
     .icon{
         fill: gold;
     }
