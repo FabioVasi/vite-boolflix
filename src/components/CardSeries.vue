@@ -26,7 +26,7 @@ export default {
 
     <div class="col">
         <div class="overlay card h-100 border-0 text-white bg-dark rounded-4 text-center">
-            <img class="rounded-2" style="aspect-ratio: 1 / 1.5; object-fit: cover;" :src="'https://image.tmdb.org/t/p/w342/' + series.poster_path" alt="">
+            <img class="rounded-2" :src="'https://image.tmdb.org/t/p/w342/' + series.poster_path" alt="">
 
             <div class="shadow rounded-2">
                 <h3>Nome: {{series.name}}</h3>
@@ -54,6 +54,10 @@ export default {
 <style lang="scss" scoped>
     @use '../assets/scss/partials/variables.scss' as *;
 
+    .card{
+        height: 500px;
+        width: 342px;
+    }
     img:hover .overlay{
         display: block;
     }
@@ -72,6 +76,7 @@ export default {
         background-color: #000000e0;
         width: 100%;
         height: 100%;
+        overflow-y: scroll;
     }
     .icon{
         fill: gold;

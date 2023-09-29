@@ -21,7 +21,7 @@ export default {
     
     <section>
 
-        <div class="container">
+        <div class="container-fluid">
         
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
 
